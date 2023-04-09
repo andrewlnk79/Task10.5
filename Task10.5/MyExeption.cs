@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Task10._5
 {
-    internal interface ICalc
+    internal class MyExeption : Exception
     {
-        void Calc(double num1, double num2);  
+        public MyExeption(string message) : base(message) { } 
     }
 }

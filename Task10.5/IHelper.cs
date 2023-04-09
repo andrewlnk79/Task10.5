@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Task10._5
 {
-    internal interface ICalc
+    internal interface IHelper
     {
-        void Calc(double num1, double num2);  
+        void HelpMessage(string message);
+        void ReadConsoleNum1();
+
     }
 }
