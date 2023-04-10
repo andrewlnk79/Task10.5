@@ -8,8 +8,15 @@ namespace Task10._5
 {
     internal interface IHelper
     {
+        int num1 { get; set; }
+        int num2 { get; set; }
         void HelpMessage(string message);
-        void ReadConsoleNum1();
+
+        int ReadConsoleNum1();
+        int ReadConsoleNum2();
+        int Operation(int num1, int num2);
+
+
 
     }
 }

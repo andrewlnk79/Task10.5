@@ -6,38 +6,37 @@ using System.Threading.Tasks;
 
 namespace Task10._5
 {
-    internal class CalculatorPlus:ICalc
+    internal class CalculatorPlus : ICalc
     {
-        IHelper helper { get; }
-        public CalculatorPlus(Helper helper)
+        int num1 { get; set; }
+        int num2 { get; set; }
+        
+        IHelper Helper { get; }
+        public CalculatorPlus(IHelper helper)
         {
-            this.helper = helper;
-            helper.HelpMessage("введите число1");
-            try
-            {
-                helper.ReadConsoleNum1();
-            }
-            catch (Exception)
-            {
+           Helper = helper;
 
-                Console.WriteLine(new MyExeption("нужно вводть число"));
-            }
-            helper.HelpMessage("введите число 2");
-            try
-            {
-                helper.ReadConsoleNum2();
-            }
-            catch (Exception)
-            {
 
-                Console.WriteLine(new MyExeption("нужно вводть число"));
-            }
         }
+
+
 
         public void Calc()
         {
-            //double result = num1 + num2;
-            //Console.WriteLine(result);
-        }
+            Helper.HelpMessage("введите число1");
+           
+                Helper.ReadConsoleNum1();
+
+
+
+            Helper.HelpMessage("введите число2");
+
+            Helper.ReadConsoleNum2();
+           
+            
+            Helper.Operation(num1, num2);
+                
+               
+            }
     }
 }

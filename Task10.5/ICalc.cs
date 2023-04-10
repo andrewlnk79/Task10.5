@@ -8,6 +8,6 @@ namespace Task10._5
 {
     internal interface ICalc
     {
-        void Calc(double num1, double num2);  
+        void Calc();  
     }
 }
