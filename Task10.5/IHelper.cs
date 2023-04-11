@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task10._5
 {
-    internal interface IHelper
+    public interface IHelper
     {
         int num1 { get; set; }
         int num2 { get; set; }
@@ -14,7 +14,7 @@ namespace Task10._5
 
         int ReadConsoleNum1();
         int ReadConsoleNum2();
-        int Operation(int num1, int num2);
+        void Operation();
 
 
 

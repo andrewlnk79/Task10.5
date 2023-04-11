@@ -2,7 +2,7 @@
 using Task10._5;
 class Program
 {
-    public static IHelper Helper { get; set; }
+    public static IHelper? Helper { get; set; }
     static void Main()
     {
         Helper = new Helper();

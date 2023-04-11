@@ -8,8 +8,7 @@ namespace Task10._5
 {
     internal class CalculatorPlus : ICalc
     {
-        int num1 { get; set; }
-        int num2 { get; set; }
+      
         
         IHelper Helper { get; }
         public CalculatorPlus(IHelper helper)
@@ -34,7 +33,7 @@ namespace Task10._5
             Helper.ReadConsoleNum2();
            
             
-            Helper.Operation(num1, num2);
+            Helper.Operation();
                 
                
             }

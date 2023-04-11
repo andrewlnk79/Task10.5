@@ -9,8 +9,8 @@ namespace Task10._5
 {
     internal class Helper : IHelper
     {
-        public int num1 { get; set; }
-        public int num2 { get; set; }
+        public int num1 { get; set; } 
+        public int num2 { get; set; } 
 
         public Helper()
         {
@@ -24,36 +24,40 @@ namespace Task10._5
 
         public int ReadConsoleNum1()
         {
+            
             try
-            {
-                int num1 = int.Parse( Console.ReadLine());
-            }
-            catch
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(new MyExeption("нужно вводить целое число"));
-            }
-            return num1;
-        }
-        public int ReadConsoleNum2()
-        {
-            try
-            {
-                int num2 = int.Parse( Console.ReadLine());
+            {     
+                num1 = int.Parse(Console.ReadLine());
             }
             catch (Exception)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(new MyExeption("нужно вводить целое число"));
+
+
+            }
+            return num1;
+        }
+        public int ReadConsoleNum2()
+        {
+            
+            try
+            { 
+                num2 = int.Parse(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(new MyExeption("нужно вводить целое число")); 
             }
             return num2;
         }
-        public int Operation(int num1, int num2)
+         public void Operation()
         {
             int result = num1 + num2;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("результат=" + result);
-            return result;
+           
         }
 
 
@@ -61,3 +65,4 @@ namespace Task10._5
 
     }
 }
+
